@@ -1,0 +1,130 @@
+/*Aquí estamos trabajando el header (El encabezado)*/
+.headerPrincipal .container {
+    display: flex;
+    /*Elementos aliniados uno al lado del otro*/
+    align-items: center;
+    /*Elementos en el medio*/
+    justify-content: space-between;
+    /*Espacio entre elementos*/
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+/*Comenzamos con el footer*/
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between; /*espacio entre elementos*/
+    /*justify-content: center;/* /*Elementos en el medio dejando espacio a los lados*/
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*Espacio alrededor de los elementos*/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+/*Aquí iniciamos con el mapa de cursos*/
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    /*Elementos uno debajo del otro*/
+    height: 255px;
+    /*Altura de elementos*/
+    flex-wrap: wrap;
+    /*cuando llega a 255px el siguiente elemento se pone al costado derecho*/
+    /*flex-direction: row;/*Elementos van a estar de un lado a otro*/
+}
+
+/*Continuamos con nuestros cursos*/
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%;/*se pone con este % porque se quieren acomodar 4 elementos*/
+}
+.videoSobre .container{
+    display: flex;
+}
+.videoSobre-sobre{
+    text-align: center;/*Elementos alineados verticalmente */
+    display: flex; /*Se alinean los elementos uno al lado del otro*/
+    flex-direction: column;
+}
+.videoSobre-video{
+    flex-grow: 2; /*Distribución de los elementos*/
+}
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+/*------------------------------------------------------------------------*/
+/*Comenzamos con el sistema Resposive*/
+@media(max-width: 768px) {
+
+    /*Este codigo 
+    se aplica solopara pantallas maximo
+    de 768px que es el maximo común de una table*/
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+    .headerPrincipal-nav-link-app{
+        order: -1;
+    }
+    .videoSobre .container{
+        flex-direction: column;
+    }
+    /*flex-grow: 1;*/ /*incrementa el tamaño proporcionalmente al valor asignado en el espacio que sobra en nuestro flexbox*/
+    /*flex-shrink: 1;*//*2 veces menos que los otros item */
+}
